@@ -2,7 +2,7 @@
 
 scheme stuff, probably mostly chicken-scheme, maybe some racket.
 
-<img src="http://xkcd.com/297/"/>
+[Because Lisp is awesome](http://xkcd.com/297/).
 
 ## Why?
 
