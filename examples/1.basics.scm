@@ -4,7 +4,6 @@
 ; Lisp relies exclusively on brackets
 ; I'm going to try to show why that's a beautiful thing
 
-
 #|
 
   btw, this is a block comment
@@ -14,7 +13,7 @@
   Notice that the above block comment
   does not disrupt the outer comment blocks.
   That's because blocks nest properly,
-  unlike code blocks in C or Javascript.
+  unlike block comments in C or Javascript.
 
   This makes it easier for your to quickly comment out
   irrelevant sections without having to worry
@@ -33,5 +32,3 @@
   and execute the resulting binary with:
   `./1.basics`
 |#
-
-
