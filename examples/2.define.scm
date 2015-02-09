@@ -60,6 +60,8 @@
   (display aString)
   (newline))
 
+
+(displayln (square 5))
 (displayln "Hello World!")
 (displayln "Isn't Lisp elegant?")
 
