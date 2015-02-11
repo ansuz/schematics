@@ -44,17 +44,30 @@
 
 ; To list out all the keys used, you can map the 'car' function
 ; this returns the first element of any list
-(display (map car nested)) ; (A B)
+(define keys (map car nested))
+(display keys) ; (A B)
 (newline)
 
 ; To access the values at a given scope, do the save with 'cdr'
 ; it retuns the second element of any list
 ; below, I use this on one of the nested lists
-(display (map cdr (cdr nested))) ; (((c . #(bang! 2.0 #f)) (d . #t)))
+(define values (map cdr (cdr nested)))
+(display values) ; (((c . #(bang! 2.0 #f)) (d . #t)))
 (newline) ; map returns a list
 ; in this case, a list containing a two element list of lists
 
+; suppose we want to access the array 'c'
+; we can use a combination of 'car' and 'cdr' to unwrap 'values'
+(define c (cdr (car (car values)))) 
+; 'c' is the second element, of the first element, of the first element
+(display c)
+(newline)
 
 ; You can use 'list-ref' to access members by their index, counting from zero
 (display (list-ref nested 0))
+(newline)
+
+; as you may have noticed, 'c' is different from the other lists
+; json-abnf encodes JSON arrays as 'vector' types, which have a slightly different interface
+(display (vector-ref c 1))
 (newline)
